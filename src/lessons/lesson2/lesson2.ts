@@ -28,9 +28,26 @@ console.log('lesson 2');
 //     return n + n2;
 //   };
 // }
-//
-// console.log(num(2)(2));
-//
+// //
+ //console.log(num(2)(2));
+// function num(n: number){
+//   return function(num: number){
+//     return n + num
+//   }
+// }
+// const addOne = num(10)
+// console.log(addOne(1));
+
+// let num = 0
+// function rec(){
+//   num++
+//   console.log(num);
+//   if(num>10){
+//     return num
+//   }
+//   rec()
+// }
+// rec()
 // const num1 = (n: number) => (n2: number) => n + n2;
 // console.log(num1(4)(5));
 // Task 02
@@ -115,35 +132,35 @@ console.log('lesson 2');
 
 // Task 05
 // решить все задачи по рекурсии которые даны в конце статьи https://learn.javascript.ru/recursion
-function superSum(num: number) {
-  if (num === 0) return 0;
-  if (num === 1) return (n: number) => n
-  let _arguments: number[] = []
-  function helper(...arg: number[]){
-_arguments=[..._arguments, ...arg]
-    if(_arguments.length>=num){
-      _arguments.length=num
-      return _arguments.reduce((acc,number)=>acc+number)
-    }else {
-      return helper
-    }
-  }
-  return helper
-}
-
-console.log(superSum(0));
-//@ts-ignore
-console.log(superSum(1));
-//@ts-ignore
-console.log(superSum(3)(2)(5)(3));
-//@ts-ignore
-console.log(superSum(3)(2)(5,3));
-//@ts-ignore
-console.log(superSum(3)(2,5,3));
-//@ts-ignore
-console.log(superSum(3)(2,5)(3));
-//@ts-ignore
-console.log(superSum(3)(2,5)(3,9));
+// function superSum(num: number) {
+//   if (num === 0) return 0;
+//   if (num === 1) return (n: number) => n
+//   let _arguments: number[] = []
+//   function helper(...arg: number[]){
+// _arguments=[..._arguments, ...arg]
+//     if(_arguments.length>=num){
+//       _arguments.length=num
+//       return _arguments.reduce((acc,number)=>acc+number)
+//     }else {
+//       return helper
+//     }
+//   }
+//   return helper
+// }
+//
+// console.log(superSum(0));
+// //@ts-ignore
+// console.log(superSum(1));
+// //@ts-ignore
+// console.log(superSum(3)(2)(5)(3));
+// //@ts-ignore
+// console.log(superSum(3)(2)(5,3));
+// //@ts-ignore
+// console.log(superSum(3)(2,5,3));
+// //@ts-ignore
+// console.log(superSum(3)(2,5)(3));
+// //@ts-ignore
+// console.log(superSum(3)(2,5)(3,9));
 
 //
 export default () => {
