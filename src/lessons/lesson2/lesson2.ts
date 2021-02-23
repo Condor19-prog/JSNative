@@ -1,4 +1,4 @@
-console.log('lesson 2');
+// console.log('lesson 2');
 
 // Lexical environment
 // http://jsflow.org/docs/lex-env/
